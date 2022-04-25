@@ -5,13 +5,18 @@ USE tienda;
 /* 3 */ SELECT * FROM producto;
 /* 4 */ SELECT nombre, precio, precio / 1.07 FROM producto;
 /* 5 */ SELECT nombre AS 'Nombre del producto', precio AS 'Precio en Euros', precio / 1.07 AS 'Precio en dólares' FROM producto;
-/* 6 */  SELECT UPPER (nombre), precio FROM producto;
-/* 7 */  SELECT LOWER (nombre), precio FROM producto;
- 
+/* 6 */ SELECT UPPER (nombre), precio FROM producto;
+/* 7 */ SELECT LOWER (nombre), precio FROM producto;
+/* 8 */ SELECT nombre, UPPER(SUBSTRING(nombre, 1, 2)) FROM fabricante; 
+/* 9 */ SELECT nombre, ROUND(precio) FROM producto;
+/* 10 */ SELECT nombre, FLOOR(precio) FROM producto;
 /* 11 */ SELECT fabricante.codigo FROM fabricante INNER JOIN producto ON producto.codigo_fabricante = fabricante.codigo;
 /* 12 */ SELECT DISTINCT fabricante.codigo FROM fabricante INNER JOIN producto ON producto.codigo_fabricante = fabricante.codigo;
 /* 13 */ SELECT nombre FROM fabricante ORDER BY nombre ASC;
 /* 14 */ SELECT nombre FROM fabricante ORDER BY nombre DESC;
+
+/* 16 */ SELECT * FROM fabricante LIMIT 0, 5;
+/* 17 */ SELECT * FROM fabricante LIMIT 3, 2;
 
 /* 20 */ SELECT nombre, codigo_fabricante FROM producto WHERE codigo_fabricante = 2;
 /* 21 */ SELECT producto.nombre, precio, fabricante.nombre FROM producto, fabricante WHERE fabricante.codigo = producto.codigo;
