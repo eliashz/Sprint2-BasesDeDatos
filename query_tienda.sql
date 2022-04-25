@@ -14,10 +14,11 @@ USE tienda;
 /* 12 */ SELECT DISTINCT fabricante.codigo FROM fabricante INNER JOIN producto ON producto.codigo_fabricante = fabricante.codigo;
 /* 13 */ SELECT nombre FROM fabricante ORDER BY nombre ASC;
 /* 14 */ SELECT nombre FROM fabricante ORDER BY nombre DESC;
-
+/* 15 */ SELECT * FROM producto ORDER BY nombre ASC, precio DESC;
 /* 16 */ SELECT * FROM fabricante LIMIT 0, 5;
 /* 17 */ SELECT * FROM fabricante LIMIT 3, 2;
-
+/* 18 */ SELECT nombre, precio FROM producto ORDER BY precio LIMIT 1;
+/* 19 */ SELECT nombre, precio FROM producto ORDER BY precio DESC LIMIT 1;
 /* 20 */ SELECT nombre, codigo_fabricante FROM producto WHERE codigo_fabricante = 2;
 /* 21 */ SELECT producto.nombre, precio, fabricante.nombre FROM producto, fabricante WHERE fabricante.codigo = producto.codigo;
 /* 22 */ SELECT producto.nombre, precio, fabricante.nombre FROM producto, fabricante WHERE fabricante.codigo = producto.codigo ORDER BY fabricante.nombre ASC;
