@@ -5,6 +5,8 @@ USE tienda;
 /* 3 */ SELECT * FROM producto;
 /* 4 */ SELECT nombre, precio, precio / 1.07 FROM producto;
 /* 5 */ SELECT nombre AS 'Nombre del producto', precio AS 'Precio en Euros', precio / 1.07 AS 'Precio en dólares' FROM producto;
+/* 6 */  SELECT UPPER (nombre), precio FROM producto;
+/* 7 */  SELECT LOWER (nombre), precio FROM producto;
  
 /* 11 */ SELECT fabricante.codigo FROM fabricante INNER JOIN producto ON producto.codigo_fabricante = fabricante.codigo;
 /* 12 */ SELECT DISTINCT fabricante.codigo FROM fabricante INNER JOIN producto ON producto.codigo_fabricante = fabricante.codigo;

@@ -4,9 +4,9 @@
 4. Llista el nom dels productos, el preu en euros i el preu en dòlars estatunidencs (USD).
 5. Llista el nom dels productos, el preu en euros i el preu en dòlars estatunidencs (USD). Utilitza els següents àlies per a les columnes: nom de producto, euros, dolars.
 6. Llista els noms i els preus de tots els productos de la taula producto, convertint els noms a majúscula.
-Llista els noms i els preus de tots els productos de la taula producto, convertint els noms a minúscula.
+7. Llista els noms i els preus de tots els productos de la taula producto, convertint els noms a minúscula.
 Llista el nom de tots els fabricants en una columna, i en una altra columna obtingui en majúscules els dos primers caràcters del nom del fabricant.
-Llista els noms i els preus de tots els productos de la taula producto, arrodonint el valor del preu.
+9. Llista els noms i els preus de tots els productos de la taula producto, arrodonint el valor del preu.
 Llista els noms i els preus de tots els productos de la taula producto, truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
 11. Llista el codi dels fabricants que tenen productos en la taula producto.
 12. Llista el codi dels fabricants que tenen productos en la taula producto, eliminant els codis que apareixen repetits.
