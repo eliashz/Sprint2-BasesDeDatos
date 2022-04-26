@@ -1,7 +1,12 @@
 USE universidad;
 
-/* 8 */ SELECT DISTINCT p.nombre 
-FROM  persona p
-JOIN alumno_se_matricula_asignatura aa
-ON aa.id_alumno = p.id 
-WHERE aa.id_curso_escolar = 5;
+/* 9 */ 
+SELECT DISTINCT departamento.nombre
+FROM departamento
+JOIN profesor
+ON departamento.id = profesor.id_departamento
+JOIN asignatura
+ON asignatura.id_profesor = profesor.id_profesor
+JOIN grado
+WHERE grado.id = 4
+;

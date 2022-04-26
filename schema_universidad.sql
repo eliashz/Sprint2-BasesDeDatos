@@ -267,4 +267,5 @@ USE universidad;
 /* 5 */ SELECT nombre FROM asignatura WHERE cuatrimestre = 1 AND curso = 3 AND id_grado = 7;
 /* 6 */ SELECT apellido1, apellido2, persona.nombre, departamento.nombre FROM persona JOIN profesor ON persona.id = profesor.id_profesor JOIN departamento ON profesor.id_departamento = departamento.id ORDER BY apellido1 ASC, apellido2 ASC, persona.nombre ASC;
 /* 7 */ SELECT asignatura.nombre, ce.anyo_inicio FROM persona JOIN alumno_se_matricula_asignatura aa ON  persona.id = aa.id_alumno JOIN asignatura ON aa.id_asignatura = asignatura.id JOIN curso_escolar ce ON ce.id = aa.id_curso_escolar WHERE persona.nif = '26902806M';
-/* 8 */ SELECT DISTINCT p.nombre FROM  persona p JOIN alumno_se_matricula_asignatura aaON aa.id_alumno = p.id WHERE aa.id_curso_escolar = 5;
+/* 8 */ SELECT DISTINCT departamento.nombre FROM departamento JOIN profesor ON departamento.id = profesor.id_departamento JOIN asignatura ON asignatura.id_profesor = profesor.id_profesor JOIN grado WHERE grado.id = 4;
+/* 9 */ SELECT DISTINCT p.nombre FROM  persona p JOIN alumno_se_matricula_asignatura aa ON aa.id_alumno = p.id WHERE aa.id_curso_escolar = 5;
