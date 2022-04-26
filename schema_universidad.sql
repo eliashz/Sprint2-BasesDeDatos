@@ -266,3 +266,12 @@ USE universidad;
 /* 4 */ SELECT * FROM persona WHERE tipo = 'profesor' AND telefono IS NULL AND nif LIKE '%k';
 /* 5 */ SELECT nombre FROM asignatura WHERE cuatrimestre = 1 AND curso = 3 AND id_grado = 7;
 /* 6 */  SELECT apellido1, apellido2, persona.nombre, departamento.nombre FROM persona JOIN profesor ON persona.id = profesor.id_profesor JOIN departamento ON profesor.id_departamento = departamento.id ORDER BY apellido1 ASC, apellido2 ASC, persona.nombre ASC;
+SELECT asignatura.nombre, curso_escolar.anyo_inicio
+FROM persona
+JOIN alumno_se_matricula_asignatura
+ON  persona.id = alumno_se_matricula_asignatura.id_alumno
+JOIN asignatura
+ON alumno_se_matricula_asignatura.id_asignatura = asignatura.id
+JOIN curso_escolar
+ON curso_escolar.id = alumno_se_matricula_asignatura.id_curso_escolar
+WHERE persona.nif = '26902806M';

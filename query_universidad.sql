@@ -1,11 +1,3 @@
 USE universidad;
 
-/* 7 */  
-SELECT persona.nif, asignatura.nombre, curso_escolar.anyo_incio
-FROM persona
-JOIN alumno_se_matricula_asignatura
-ON  persona.id = alumno_se_matricula_asignatura.id_alumno
-JOIN asignatura
-ON alumno_se_matricula_asignatura.id_asignatura = asignatura.id
-JOIN curso_escolar
-ON curso_escolar.id = alumno_se_matricula_asignatura.id_curso_escolar;
+/* 7 */ SELECT asignatura.nombre, ce.anyo_inicio FROM persona JOIN alumno_se_matricula_asignatura aa ON  persona.id = aa.id_alumno JOIN asignatura ON aa.id_asignatura = asignatura.id JOIN curso_escolar ce ON ce.id = aa.id_curso_escolar WHERE persona.nif = '26902806M';
