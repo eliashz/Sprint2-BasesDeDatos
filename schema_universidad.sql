@@ -257,3 +257,11 @@ INSERT INTO alumno_se_matricula_asignatura VALUES (19, 7, 5);
 INSERT INTO alumno_se_matricula_asignatura VALUES (19, 8, 5);
 INSERT INTO alumno_se_matricula_asignatura VALUES (19, 9, 5);
 INSERT INTO alumno_se_matricula_asignatura VALUES (19, 10, 5);
+
+USE universidad;
+
+/* 1 */  SELECT apellido1, apellido2, nombre FROM persona WHERE tipo = 'alumno'  ORDER BY apellido1 ASC, apellido2 ASC, nombre ASC;
+/* 2 */  SELECT * FROM persona WHERE tipo = 'alumno' AND telefono IS NULL;
+/* 3 */  SELECT * FROM persona WHERE tipo = 'alumno' AND fecha_nacimiento BETWEEN '1999-01-01' AND '1999-12-31';
+/* 4 */  SELECT * FROM persona WHERE tipo = 'profesor' AND telefono IS NULL AND nif LIKE '%k';
+/* 5 */  SELECT nombre FROM asignatura WHERE cuatrimestre = 1 AND curso = 3 AND id_grado = 7;

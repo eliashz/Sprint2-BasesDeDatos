@@ -27,4 +27,3 @@ USE tienda;
 /* 27 */  SELECT nombre, precio FROM producto WHERE producto.precio > '200';
 /* 28 */  SELECT nombre FROM producto WHERE codigo_fabricante = 1 OR codigo_fabricante = 3 OR codigo_fabricante = 5;
 /* 29 */  SELECT nombre FROM producto WHERE codigo_fabricante IN(1,3,5);
-/*  */  
