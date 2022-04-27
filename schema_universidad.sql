@@ -277,3 +277,5 @@ INSERT INTO alumno_se_matricula_asignatura VALUES (19, 10, 5);
 
 /* 1 */ SELECT COUNT(nombre) FROM persona WHERE tipo = 'alumno';
 /* 2 */ SELECT COUNT(id) FROM persona WHERE tipo = 'alumno' AND fecha_nacimiento >= '1999-01-01' AND fecha_nacimiento<= '1999-12-31';
+
+/* 9 */ SELECT *, MIN(fecha_nacimiento)  FROM persona WHERE tipo = 'alumno';
