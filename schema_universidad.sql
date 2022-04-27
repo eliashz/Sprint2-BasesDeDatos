@@ -258,8 +258,6 @@ INSERT INTO alumno_se_matricula_asignatura VALUES (19, 8, 5);
 INSERT INTO alumno_se_matricula_asignatura VALUES (19, 9, 5);
 INSERT INTO alumno_se_matricula_asignatura VALUES (19, 10, 5);
 
-USE universidad;
-
 /* 1 */ SELECT apellido1, apellido2, nombre FROM persona WHERE tipo = 'alumno'  ORDER BY apellido1 ASC, apellido2 ASC, nombre ASC;
 /* 2 */ SELECT * FROM persona WHERE tipo = 'alumno' AND telefono IS NULL;
 /* 3 */ SELECT * FROM persona WHERE tipo = 'alumno' AND fecha_nacimiento BETWEEN '1999-01-01' AND '1999-12-31';
@@ -275,3 +273,6 @@ USE universidad;
 /* 3 */ SELECT d.nombre FROM departamento d LEFT JOIN profesor p ON  d.id = p.id_departamento WHERE p.id_departamento IS NULL;
 /* 4 */ SELECT persona.nombre FROM persona JOIN profesor ON persona.id = profesor.id_profesor LEFT JOIN asignatura ON asignatura.id_profesor = profesor.id_profesor WHERE asignatura.id_profesor IS NULL; 
 /* 5 */ SELECT asignatura.nombre FROM asignatura LEFT JOIN profesor ON asignatura.id_profesor = profesor.id_profesor WHERE asignatura.id_profesor IS NULL;
+/* 6 */ SELECT departamento.nombre FROM departamento JOIN profesor ON departamento.id = profesor.id_departamento LEFT JOIN asignatura ON  asignatura.id_profesor = profesor.id_profesor WHERE asignatura.id_profesor IS NULL;
+
+/* 1 */ SELECT COUNT(nombre) FROM persona WHERE tipo = 'alumno';
