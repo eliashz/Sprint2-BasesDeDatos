@@ -269,3 +269,6 @@ USE universidad;
 /* 7 */ SELECT asignatura.nombre, ce.anyo_inicio FROM persona JOIN alumno_se_matricula_asignatura aa ON  persona.id = aa.id_alumno JOIN asignatura ON aa.id_asignatura = asignatura.id JOIN curso_escolar ce ON ce.id = aa.id_curso_escolar WHERE persona.nif = '26902806M';
 /* 8 */ SELECT DISTINCT departamento.nombre FROM departamento JOIN profesor ON departamento.id = profesor.id_departamento JOIN asignatura ON asignatura.id_profesor = profesor.id_profesor JOIN grado WHERE grado.id = 4;
 /* 9 */ SELECT DISTINCT p.nombre FROM  persona p JOIN alumno_se_matricula_asignatura aa ON aa.id_alumno = p.id WHERE aa.id_curso_escolar = 5;
+
+/* 1 */ SELECT d.nombre, persona.apellido1, persona.apellido2, persona.nombre FROM departamento d JOIN profesor p ON p.id_departamento = d.id RIGHT JOIN persona ON persona.id = p.id_profesor ORDER BY d.nombre ASC, persona.apellido1 ASC, persona.apellido2 ASC, persona.nombre ASC; 
+/* 2 */ SELECT persona.apellido1, persona.apellido2, persona.nombre FROM departamento d JOIN profesor p ON p.id_departamento = null RIGHT JOIN persona ON persona.id = p.id_profesor; 
