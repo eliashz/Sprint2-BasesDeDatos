@@ -11,7 +11,7 @@
 ## Resolgui les 6 següents consultes utilitzant les clàusules LEFT JOIN i RIGHT JOIN.
 1. Retorna un llistat amb els noms de tots els professors i els departaments que tenen vinculats. El llistat també ha de mostrar aquells professors que no tenen cap departament associat. El llistat ha de retornar quatre columnes, nom del departament, primer cognom, segon cognom i nom del professor. El resultat estarà ordenat alfabèticament de menor a major pel nom del departament, cognoms i el nom.
 2. Retorna un llistat amb els professors que no estan associats a un departament.
-Retorna un llistat amb els departaments que no tenen professors associats.
+3. Retorna un llistat amb els departaments que no tenen professors associats.
 Retorna un llistat amb els professors que no imparteixen cap assignatura.
 Retorna un llistat amb les assignatures que no tenen un professor assignat.
 Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar.
