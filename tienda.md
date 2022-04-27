@@ -20,9 +20,9 @@
 20. Llista el nom de tots els productos del fabricant el codi de fabricant del qual és igual a 2.
 21. Retorna una llista amb el nom del producte, preu i nom de fabricant de tots els productes de la base de dades.
 22. Retorna una llista amb el nom del producte, preu i nom de fabricant de tots els productes de la base de dades. Ordeni el resultat pel nom del fabricador, per ordre alfabètic.
-Retorna una llista amb el codi del producte, nom del producte, codi del fabricador i nom del fabricador, de tots els productes de la base de dades.
-Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més barat.
-Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més car.
+23. Retorna una llista amb el codi del producte, nom del producte, codi del fabricador i nom del fabricador, de tots els productes de la base de dades.
+24. Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més barat.
+25 Retorna el nom del producte, el seu preu i el nom del seu fabricant, del producte més car.
 26. Retorna una llista de tots els productes del fabricador Lenovo.
 27. Retorna una llista de tots els productes del fabricant Crucial que tinguin un preu major que 200€.
 28. Retorna un llistat amb tots els productes dels fabricants Asus, Hewlett-Packard i Seagate. Sense utilitzar l'operador IN.
