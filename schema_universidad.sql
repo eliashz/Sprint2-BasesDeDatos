@@ -276,3 +276,4 @@ INSERT INTO alumno_se_matricula_asignatura VALUES (19, 10, 5);
 /* 6 */ SELECT departamento.nombre FROM departamento JOIN profesor ON departamento.id = profesor.id_departamento LEFT JOIN asignatura ON  asignatura.id_profesor = profesor.id_profesor WHERE asignatura.id_profesor IS NULL;
 
 /* 1 */ SELECT COUNT(nombre) FROM persona WHERE tipo = 'alumno';
+/* 2 */ SELECT COUNT(id) FROM persona WHERE tipo = 'alumno' AND fecha_nacimiento >= '1999-01-01' AND fecha_nacimiento<= '1999-12-31';
