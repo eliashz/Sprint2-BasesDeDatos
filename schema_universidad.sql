@@ -272,3 +272,4 @@ USE universidad;
 
 /* 1 */ SELECT d.nombre, persona.apellido1, persona.apellido2, persona.nombre FROM departamento d JOIN profesor p ON p.id_departamento = d.id RIGHT JOIN persona ON persona.id = p.id_profesor ORDER BY d.nombre ASC, persona.apellido1 ASC, persona.apellido2 ASC, persona.nombre ASC; 
 /* 2 */ SELECT persona.apellido1, persona.apellido2, persona.nombre FROM departamento d JOIN profesor p ON p.id_departamento = null RIGHT JOIN persona ON persona.id = p.id_profesor; 
+/* 3 */  SELECT d.nombre FROM departamento d LEFT JOIN profesor p ON  d.id = p.id_departamento WHERE p.id_departamento IS NULL;

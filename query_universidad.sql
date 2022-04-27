@@ -1,9 +1,3 @@
 USE universidad;
 
-/* 2 */  
-SELECT departamento.nombre
-FROM departamento d 
-JOIN profesor p 
-ON p.id_departamento = null 
-RIGHT JOIN persona 
-ON persona.id = p.id_profesor; 
+/* 3 */  SELECT d.nombre FROM departamento d LEFT JOIN profesor p ON  d.id = p.id_departamento WHERE p.id_departamento IS NULL;
