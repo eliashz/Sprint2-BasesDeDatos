@@ -1,11 +1,13 @@
 use('pizzeria');
 
+db.dropDatabase();
+
 db.clientes.drop();
 
 db.clientes.insertMany([
   { 
     '_id': 1, 
-    'nombre': 'Elías', 
+    'nombre': 'Jeremías', 
     'apellido': 'Huerta', 
     'direccion': 'C/ Llacuna, 2', 
     'codigo_postal': '08011',

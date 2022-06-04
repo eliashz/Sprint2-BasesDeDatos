@@ -1,5 +1,7 @@
 use('pizzeria');
 
+db.dropDatabase()
+
 db.clientes.drop();
 
 db.clientes.insertMany([

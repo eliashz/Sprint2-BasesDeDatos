@@ -1,5 +1,7 @@
 use('opticaehz');
 
+db.dropDatabase()
+
 db.proveedor.drop();
 
 db.proveedor.insertMany([

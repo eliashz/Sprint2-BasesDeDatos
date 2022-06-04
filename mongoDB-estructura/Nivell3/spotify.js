@@ -1,5 +1,6 @@
-
 use('spotifyehz');
+
+db.dropDatabase()
 
 db.usuarios.drop();
 

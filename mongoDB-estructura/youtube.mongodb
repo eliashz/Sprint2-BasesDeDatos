@@ -1,5 +1,7 @@
 use('yotubeehz');
 
+db.dropDatabase()
+
 db.usuarios.drop();
 
 db.usuarios.insertMany([
