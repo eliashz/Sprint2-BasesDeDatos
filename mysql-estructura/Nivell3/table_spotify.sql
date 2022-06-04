@@ -200,18 +200,6 @@ CREATE TABLE IF NOT EXISTS `spotify`.`canciones_anadidas` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `spotify`.`relacionados` (
-  `idrelacionados` INT NOT NULL AUTO_INCREMENT,
-  `idartistas` INT,
-  PRIMARY KEY (`idrelacionados`),
-  INDEX `fk_relacionados_artistas1_idx` (`idartistas` ASC) VISIBLE,
-  CONSTRAINT `fk_relacionados_artistas1`
-    FOREIGN KEY (`idartistas`)
-    REFERENCES `spotify`.`artistas` (`idartistas`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
 CREATE TABLE IF NOT EXISTS `spotify`.`albums_favoritos` (
   `idalbums_favoritos` INT NOT NULL AUTO_INCREMENT,
   `idusuarios` INT NOT NULL,
@@ -233,8 +221,8 @@ ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `spotify`.`canciones_favoritas` (
   `idcanciones_favoritas` INT NOT NULL AUTO_INCREMENT,
-  `idcanciones` INT NOT NULL,
   `idusuarios` INT NOT NULL,
+  `idcanciones` INT NOT NULL,
   PRIMARY KEY (`idcanciones_favoritas`),
   INDEX `fk_canciones_favoritas_canciones1_idx` (`idcanciones` ASC) VISIBLE,
   INDEX `fk_canciones_favoritas_usuarios1_idx` (`idusuarios` ASC) VISIBLE,
@@ -334,3 +322,8 @@ VALUES ('1', '1', '1', '2021-01-01'),
 ('3', '4', '1', '2021-05-05'),
 ('4', '2', '10', '2021-10-01');
 
+INSERT albums_favoritos(idusuarios, idalbums)
+VALUES('1', '2'), ('1', '3'), ('1', '5'), ('2', '1'), ('2', '2'), ('2', '6'), ('4', '7'), ('3', '6');      
+
+INSERT canciones_favoritas(idusuarios, idcanciones)
+VALUES('1', '10'), ('1', '9'), ('2', '8'), ('2', '9'), ('3', '2'), ('3', '6'), ('4', '5'), ('4', '8'), ('4', '10');      
