@@ -154,3 +154,88 @@ CREATE TABLE IF NOT EXISTS `spotify`.`canciones` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `spotify`.`canciones_anadidas` (
+  `idcanciones_anadidas` INT NOT NULL AUTO_INCREMENT,
+  `idplaylist` INT NOT NULL,
+  `idusuarios` INT NOT NULL,
+  `idcanciones` INT NOT NULL,
+  `fecha` TIMESTAMP NOT NULL,
+  PRIMARY KEY (`idcanciones_anadidas`),
+  INDEX `fk_canciones_anadidas_playlist_activas1_idx` (`idplaylist` ASC) VISIBLE,
+  INDEX `fk_canciones_anadidas_usuarios1_idx` (`idusuarios` ASC) VISIBLE,
+  INDEX `fk_canciones_anadidas_canciones1_idx` (`idcanciones` ASC) VISIBLE,
+  CONSTRAINT `fk_canciones_anadidas_playlist_activas1`
+    FOREIGN KEY (`idplaylist`)
+    REFERENCES `spotify`.`playlist_activas` (`idplaylist`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_canciones_anadidas_usuarios1`
+    FOREIGN KEY (`idusuarios`)
+    REFERENCES `spotify`.`usuarios` (`idusuarios`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_canciones_anadidas_canciones1`
+    FOREIGN KEY (`idcanciones`)
+    REFERENCES `spotify`.`canciones` (`idcanciones`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `spotify`.`relacionados` (
+  `idrelacionados` INT NOT NULL AUTO_INCREMENT,
+  `idartistas` INT NOT NULL,
+  `idartistas1` INT NOT NULL,
+  PRIMARY KEY (`idrelacionados`),
+  INDEX `fk_relacionados_artistas1_idx` (`idartistas` ASC) VISIBLE,
+  INDEX `fk_relacionados_artistas2_idx` (`idartistas1` ASC) VISIBLE,
+  CONSTRAINT `fk_relacionados_artistas1`
+    FOREIGN KEY (`idartistas`)
+    REFERENCES `spotify`.`artistas` (`idartistas`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_relacionados_artistas2`
+    FOREIGN KEY (`idartistas1`)
+    REFERENCES `spotify`.`artistas` (`idartistas`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `spotify`.`albums_favoritos` (
+  `idalbums_favoritos` INT NOT NULL AUTO_INCREMENT,
+  `idusuarios` INT NOT NULL,
+  `idalbums` INT NOT NULL,
+  PRIMARY KEY (`idalbums_favoritos`),
+  INDEX `fk_albums_favoritos_usuarios1_idx` (`idusuarios` ASC) VISIBLE,
+  INDEX `fk_albums_favoritos_albums1_idx` (`idalbums` ASC) VISIBLE,
+  CONSTRAINT `fk_albums_favoritos_usuarios1`
+    FOREIGN KEY (`idusuarios`)
+    REFERENCES `spotify`.`usuarios` (`idusuarios`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_albums_favoritos_albums1`
+    FOREIGN KEY (`idalbums`)
+    REFERENCES `spotify`.`albums` (`idalbums`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `spotify`.`canciones_favoritas` (
+  `idcanciones_favoritas` INT NOT NULL AUTO_INCREMENT,
+  `idcanciones` INT NOT NULL,
+  `idusuarios` INT NOT NULL,
+  PRIMARY KEY (`idcanciones_favoritas`),
+  INDEX `fk_canciones_favoritas_canciones1_idx` (`idcanciones` ASC) VISIBLE,
+  INDEX `fk_canciones_favoritas_usuarios1_idx` (`idusuarios` ASC) VISIBLE,
+  CONSTRAINT `fk_canciones_favoritas_canciones1`
+    FOREIGN KEY (`idcanciones`)
+    REFERENCES `spotify`.`canciones` (`idcanciones`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_canciones_favoritas_usuarios1`
+    FOREIGN KEY (`idusuarios`)
+    REFERENCES `spotify`.`usuarios` (`idusuarios`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
