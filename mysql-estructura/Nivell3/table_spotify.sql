@@ -1,4 +1,8 @@
-CREATE DATABASE IF NOT EXISTS spotify;
+DROP DATABASE IF EXISTS spotify;
+
+CREATE DATABASE spotify;
+
+USE spotify;
 
 CREATE TABLE IF NOT EXISTS `spotify`.`usuarios` (
   `idusuarios` INT NOT NULL AUTO_INCREMENT,

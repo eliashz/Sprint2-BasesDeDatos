@@ -1,4 +1,8 @@
-CREATE DATABASE IF NOT EXISTS youtube;
+DROP DATABASE IF EXISTS youtube;
+
+CREATE DATABASE youtube;
+
+USE youtube;
 
 CREATE TABLE IF NOT EXISTS `youtube`.`usuarios` (
   `idusuarios` INT NOT NULL AUTO_INCREMENT,

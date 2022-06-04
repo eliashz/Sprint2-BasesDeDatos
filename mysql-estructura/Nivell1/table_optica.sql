@@ -1,4 +1,8 @@
+DROP DATABASE IF EXISTS optica;
+
 CREATE DATABASE optica;
+
+USE optica;
 
 CREATE TABLE IF NOT EXISTS `optica`.`PROVEEDOR` (
   `id_proveedor` INT NOT NULL,

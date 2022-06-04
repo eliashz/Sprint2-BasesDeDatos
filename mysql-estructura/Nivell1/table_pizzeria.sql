@@ -1,4 +1,8 @@
-CREATE DATABASE IF NOT EXISTS pizzeria;
+DROP DATABASE IF EXISTS pizzeria;
+
+CREATE DATABASE pizzeria;
+
+USE pizzeria;
 
 CREATE TABLE IF NOT EXISTS `pizzeria`.`provincias` (
   `idprovincia` INT NOT NULL,
