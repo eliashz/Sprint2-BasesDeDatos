@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2022-05-03T10:08:26.826Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="y0i7wgy7fbg0MVe0mt8v" version="17.5.0" type="github">
+  <diagram id="2Xa-VBpmGW-IlX9dQTuJ" name="Page-1">
+    <mxGraphModel dx="752" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8DhJjnsAyztxTlLLWrKY-3" value="Usuarios" style="swimlane;" parent="1" vertex="1">
+          <mxGeometry x="30" y="110" width="210" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="8DhJjnsAyztxTlLLWrKY-4" value="id&lt;br&gt;email&lt;br&gt;password&lt;br&gt;nombre_usuario&lt;br&gt;fecha_nacimiento&lt;br&gt;sexo&lt;br&gt;pais&lt;br&gt;codigo_postal&lt;br&gt;suscripciones&lt;br&gt;canal&lt;br&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;id&lt;br&gt;nombre&lt;br&gt;descripcion&lt;br&gt;fecha_creacion&lt;br&gt;&lt;/blockquote&gt;playlist&lt;br&gt;&lt;span&gt;	&lt;/span&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;id&lt;br&gt;nombre&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;fecha_creacion&lt;br&gt;estado [publico, privado]&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;video&lt;br&gt;&lt;/blockquote&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="8DhJjnsAyztxTlLLWrKY-3" vertex="1">
+          <mxGeometry x="6" y="24" width="200" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="8DhJjnsAyztxTlLLWrKY-8" value="Videos" style="swimlane;" parent="1" vertex="1">
+          <mxGeometry x="320" y="110" width="210" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="8DhJjnsAyztxTlLLWrKY-9" value="id&lt;br&gt;titulo&lt;br&gt;descripcion&lt;br&gt;tamaño&lt;br&gt;nombre_archivo&lt;br&gt;duracion&lt;br&gt;thumbnail&lt;br&gt;numero_reproducciones&lt;br&gt;likes&lt;br&gt;dislikes&lt;br&gt;estado [publico, privado, oculto]&lt;br&gt;etiquetas&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;span&gt; &lt;/span&gt;id&lt;br&gt;&lt;span&gt; &lt;/span&gt;nombre&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;usuario&lt;br&gt;fecha_publicacion&lt;br&gt;likes&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;usuario&lt;br&gt;fecha&lt;br&gt;like_dislike&lt;/blockquote&gt;&lt;span&gt;comentarios&lt;br&gt;&lt;/span&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;span&gt;id&lt;br&gt;&lt;/span&gt;&lt;span&gt;texto&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;span&gt;fecha_hora&lt;br&gt;&lt;/span&gt;&lt;span&gt;like_dislike&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;like_dislike&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;span&gt;usuario&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;span&gt;fecha_hora&lt;/span&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="8DhJjnsAyztxTlLLWrKY-8" vertex="1">
+          <mxGeometry x="7" y="24" width="210" height="525" as="geometry" />
+        </mxCell>
+        <mxCell id="AHQU1RuEavUWXqxV_7vq-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="200" as="sourcePoint" />
+            <mxPoint x="240" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

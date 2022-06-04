@@ -1,0 +1,12 @@
+use('NYC')
+
+//db.restaurants.find()
+
+/* db.restaurants.find({
+    $and: [
+        {"cuisine": $not: {}}
+    ]
+}, {"_id": 1, "name": 1, "borough": 1, "cuisine":1});
+ */
+
+db.restaurants.find({$and: [{"grades.2.grade": "A"}, {"grades.2.score": 11}, {"grades.date": ISODate("2014-08-11T00:00:00Z")}]}, {"_id": 1, "name": 1, "grades": 1});

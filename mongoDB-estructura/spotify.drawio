@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" modified="2022-05-05T11:33:05.477Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="OqtYRKlq4ZIhzqRRnxzH" version="18.0.0" type="github">
+  <diagram id="Arlo2j0AHTZnBkgFImzr" name="Page-1">
+    <mxGraphModel dx="693" dy="815" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="q3KBd-2PDjW2QeGsBAf3-1" value="Usuarios" style="swimlane;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="200" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="q3KBd-2PDjW2QeGsBAf3-3" value="idusuario&#xa;email&#xa;password&#xa;nombre_usuario&#xa;fecha_nacimiento&#xa;sexo&#xa;pais&#xa;codigo_postal&#xa;tipo_usuario&#xa;suscripcion &#xa;    fecha_inicio&#xa;    fecha_renovacion&#xa;    pago&#xa;        tarjeta&#xa;            numero_tarjeta&#xa;            mes_anyo&#xa;            codigo&#xa;        paypal&#xa;            nombre_usuario&#xa;        registro_pagos&#xa;            idpago&#xa;            fecha_pago&#xa;            total&#xa;playlists&#xa;    titulo&#xa;    numero_canciones&#xa;    tipo&#xa;    borrada&#xa;        fecha_borrado&#xa;    activa&#xa;        idusuario&#xa;        idcancion&#xa;        fecha&#xa;siguiendo&#xa;    idgrupo&#xa;favoritos&#xa;    idalbums&#xa;    idcanciones&#xa;    " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="q3KBd-2PDjW2QeGsBAf3-1">
+          <mxGeometry y="20" width="200" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="q3KBd-2PDjW2QeGsBAf3-2" value="Spotify" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="20" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="q3KBd-2PDjW2QeGsBAf3-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.005;entryY=0.915;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="q3KBd-2PDjW2QeGsBAf3-4" target="q3KBd-2PDjW2QeGsBAf3-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q3KBd-2PDjW2QeGsBAf3-4" value="Grupos" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="414" y="450" width="200" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="q3KBd-2PDjW2QeGsBAf3-5" value="idgrupo&#xa;nombre&#xa;foto&#xa;estilo&#xa;album&#xa;    idalbum&#xa;    titulo&#xa;    anyo&#xa;    portada&#xa;    canciones&#xa;        idcanciones&#xa;        titulo&#xa;        duracion&#xa;        reproducciones&#xa;    " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="q3KBd-2PDjW2QeGsBAf3-4">
+          <mxGeometry y="20" width="200" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
