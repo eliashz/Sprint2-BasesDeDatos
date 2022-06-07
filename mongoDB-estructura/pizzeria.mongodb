@@ -235,6 +235,28 @@ db.tiendas.insertMany([
         'puesto': 'repartidor'
       },
     ],
+    'clientes': { 
+      'nombre': 'Pedro', 
+      'apellido': 'Lalala', 
+      'direccion': 'C/ Almogavers, 2', 
+      'codigo_postal': '08022',
+      'localidad': {
+        'nombre': 'Barcelona',
+        'provincia': 'Barcelona'
+      },
+      'telefono': '90110022',
+      'comandas': {
+        '_id': 6,
+        'fecha_hora': new Date("2022-05-15T18:05:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 5,
+              'fecha_hora_entrega': new Date("2022-05-15T19:15:25"),
+        },
+        'productos': [3, 4],
+        'precio_total': 10.90,
+      },
+    },
   },
   { 
     '_id': 3, 
@@ -273,6 +295,40 @@ db.tiendas.insertMany([
         'puesto': 'cocinera'
       },
     ],
+    'clientes': { 
+      'nombre': 'Antonia', 
+      'apellido': 'Garcia', 
+      'direccion': 'C/ Stree, 612', 
+      'codigo_postal': '08000',
+        'localidad': {
+        'nombre': 'Badalona',
+        'provincia': 'Barcelona'
+        },
+      'telefono': '625056626',
+        'comandas': [{
+        '_id': 6,
+        'fecha_hora': new Date("2022-05-07T20:09:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 7,
+              'fecha_hora_entrega': new Date("2022-05-07T20:15:25"),
+        },
+        'productos': [2, 7, 8],
+        'precio_total': 25.90,
+        },
+        {
+        '_id': 6,
+        'fecha_hora': new Date("2022-05-08T14:09:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 2,
+              'fecha_hora_entrega': new Date("2022-05-08T14:25:25"),
+        },
+        'productos': [2, 2, 6, 6, 8],
+        'precio_total': 50.90
+        },
+      ],
+    },
   },
 ]);
 
