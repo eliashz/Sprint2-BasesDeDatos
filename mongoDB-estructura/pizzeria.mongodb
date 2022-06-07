@@ -118,15 +118,16 @@ db.tiendas.insertMany([
         'provincia': 'Barcelona'
       },
       'telefono': '902111333',
-      'comandas': 
-      {
+      'comandas': {
         '_id': 1,
-        'idtienda': 3,
         'fecha_hora': new Date("2022-05-06T21:05:45"),
         'reparto_recoger': {
               'tipo': 'Reparto',
-              'idrepartidor': 7,
+              'idrepartidor': 2,
               'fecha_hora_entrega': new Date("2022-05-06T22:15:25"),
+        },
+        'productos': [1, 2, 2, 8],
+        'precio_total': 30.90,
       },
     },
     { 
@@ -139,7 +140,29 @@ db.tiendas.insertMany([
         'provincia': 'Girona'
         },
       'telefono': '922555666',
-      'comandas':2
+        'comandas': [{
+        '_id': 2,
+        'fecha_hora': new Date("2022-05-07T20:09:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 2,
+              'fecha_hora_entrega': new Date("2022-05-07T20:15:25"),
+        },
+        'productos': [3, 4, 7, 8],
+        'precio_total': 35.90,
+        },
+        {
+        '_id': 3,
+        'fecha_hora': new Date("2022-05-08T14:09:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 2,
+              'fecha_hora_entrega': new Date("2022-05-08T14:25:25"),
+        },
+        'productos': [1, 3, 3, 6, 8],
+        'precio_total': 40.90,
+        },
+      ]
     },
     { 
       'nombre': 'Andrés', 
@@ -151,7 +174,27 @@ db.tiendas.insertMany([
         'provincia': 'Barcelona'
       },
       'telefono': '94777333',
-      'comandas': 1,
+      'comandas': [{
+          '_id': 4,
+          'fecha_hora': new Date("2022-05-20T20:09:45"),
+          'reparto_recoger': {
+                'tipo': 'Reparto',
+                'idrepartidor': 2,
+                'fecha_hora_entrega': new Date("2022-05-20T20:15:25"),
+          },
+          'productos': [3, 4, 7, 8],
+          'precio_total': 35.90,
+        },
+        {
+          '_id': 5,
+          'fecha_hora': new Date("2022-05-21T19:09:45"),
+          'reparto_recoger': {
+                'tipo': 'recoger'
+          },
+          'productos': [1, 2],
+          'precio_total': 22.90,
+        },
+      ]
     }
   ],
   },

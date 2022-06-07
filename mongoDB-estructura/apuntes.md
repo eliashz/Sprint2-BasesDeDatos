@@ -11,4 +11,7 @@ https://www.youtube.com/watch?v=DPdAfgmkNuE
 
 [MongoDB en Mac](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)  
 `brew services start mongodb-community`  
-`mongosh`
+`mongosh`  
+
+[Data Relationships in Mongo DB](https://www.knowledgehut.com/blog/web-development/data-relationships-in-mongodb)  
+[One to many](https://learnmongodbthehardway.com/schema/schemabasics/#one-to-many-1-n)  
