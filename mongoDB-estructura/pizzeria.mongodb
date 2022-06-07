@@ -2,7 +2,57 @@ use('pizzeria');
 
 db.dropDatabase();
 
-db.clientes.drop();
+db.productos.drop();
+
+db.productos.insertMany([
+  'pizzas': [
+    {
+      'nombre': 'Nombre pizza 1',
+      'descripcion': 'Descripcion pizza 1',
+      'imagen': 'Imagen pizza 1',
+      'precio': 10.95,
+      'categoria': 'Vegetarianas'
+    },
+    {
+      'nombre': 'Nombre pizza 2',
+      'descripcion': 'Descripcion pizza 2',
+      'imagen': 'Imagen pizza 2',
+      'precio': 12.95,
+      'categoria': 'Masa fina'
+    },
+    {
+      'nombre': 'Nombre pizza 3',
+      'descripcion': 'Descripcion pizza 3',
+      'imagen': 'Imagen pizza 3',
+      'precio': 9.95,
+      'categoria': 'Sin queso'
+    },
+  ],
+  'hamburguesas': [
+    {
+      'nombre': 'Nombre hamburguesa 1',
+      'descripcion': 'Descripcion hamburguesa 1',
+      'imagen': 'Imagen hamburguesa 1',
+      'precio': 8.95,
+    },
+
+  ]
+  'bebidas': [
+    {
+      'nombre': 'Nombre bebida 1',
+      'descripcion': 'Descripcion bebida 1',
+      'imagen': 'Imagen Bebida 1',
+      'precio': 2.95,
+    },
+    {
+      'nombre': 'Nombre bebida 2',
+      'descripcion': 'Descripcion bebida 2',
+      'imagen': 'Imagen Bebida 2',
+      'precio': 1.95,
+    },
+  ]
+]);
+
 
 db.clientes.insertMany([
   { 
@@ -24,50 +74,7 @@ db.clientes.insertMany([
         'reparto_recoger': {
             'tipo': 'Recoger en tienda'
         },
-        'productos': [
-          {
-            'cantidad_productos': {
-              'pizzas': 2,
-              'hamburguesas': 1,
-              'bebidas': 2
-            },
-            'precio_total': 37.75,
-            'pizzas': [
-              {
-                'nombre': 'Nombre pizza 1',
-                'descripcion': 'Descripcion pizza 1',
-                'imagen': 'Imagen pizza 1',
-                'precio': 10.95,
-                'categoria': 'Vegetarianas'
-              },
-              {
-                'nombre': 'Nombre pizza 2',
-                'descripcion': 'Descripcion pizza 2',
-                'imagen': 'Imagen pizza 2',
-                'precio': 12.95,
-                'categoria': 'Masa fina'
-              },
-          ],
-          'hamburguesas': {
-            'nombre': 'Nombre hamburguesa 1',
-              'descripcion': 'Descripcion hamburguesa 1',
-              'imagen': 'Imagen hamburguesa 1',
-              'precio': 8.95,
-          },
-          'bebidas': [
-            {
-              'nombre': 'Nombre bebida 1',
-              'descripcion': 'Descripcion bebida 1',
-              'imagen': 'Imagen Bebida 1',
-              'precio': 2.95,
-            },
-            {
-              'nombre': 'Nombre bebida 2',
-              'descripcion': 'Descripcion bebida 2',
-              'imagen': 'Imagen Bebida 2',
-              'precio': 1.95,
-            },
-          ]
+        
         },
         ] 
       },
@@ -80,30 +87,7 @@ db.clientes.insertMany([
             'idrepartidor': 2,
             'fecha_hora_entrega': new Date("2022-01-20T13:15:25"),
         },
-        'productos': [
-          {
-            'cantidad_productos': {
-              'pizzas': 2,
-              'hamburguesas': 2,
-              'bebidas': 1
-            },
-            'precio_total': 43.75,
-            'pizzas': [
-              {
-                'nombre': 'Nombre pizza 2',
-                'descripcion': 'Descripcion pizza 2',
-                'imagen': 'Imagen pizza 2',
-                'precio': 12.95,
-                'categoria': 'Masa fina'
-              },
-              {
-                'nombre': 'Nombre pizza 3',
-                'descripcion': 'Descripcion pizza 3',
-                'imagen': 'Imagen pizza 3',
-                'precio': 9.95,
-                'categoria': 'Sin queso'
-              },
-          ],
+
             'hamburguesas': [
             {
               'nombre': 'Nombre hamburguesa 2',
@@ -202,37 +186,8 @@ db.clientes.insertMany([
             'idrepartidor': 7,
             'fecha_hora_entrega': new Date("2022-05-06T22:15:25"),
       },
-      'productos': [
-        {
-          'cantidad_productos': {
-            'pizzas': 1,
-            'hamburguesas': 1,
-            'bebidas': 1
-          },
-          'precio_total': 44.75,
-          'pizzas':
-            {
-              'nombre': 'Nombre pizza 2',
-              'descripcion': 'Descripcion pizza 2',
-              'imagen': 'Imagen pizza 1',
-              'precio': 11.95,
-              'categoria': 'Vegetarianas'
-            },
-          'hamburguesas': {
-            'nombre': 'Nombre hamburguesa 1',
-              'descripcion': 'Descripcion hamburguesa 1',
-              'imagen': 'Imagen hamburguesa 1',
-              'precio': 9.95,
-          },
-          'bebidas': 
-            {
-              'nombre': 'Nombre bebida 1',
-              'descripcion': 'Descripcion bebida 1',
-              'imagen': 'Imagen Bebida 1',
-              'precio': 2.95,
-            },
-        },
-      ] 
+
+  
     },
   },
 ]);
