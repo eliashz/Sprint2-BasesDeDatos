@@ -1,240 +1,79 @@
 use('pizzeria');
 
-db.dropDatabase()
+db.dropDatabase();
 
-db.clientes.drop();
+db.productos.drop();
 
-db.clientes.insertMany([
-  { 
-    '_id': 1, 
-    'nombre': 'Elías', 
-    'apellido': 'Huerta', 
-    'direccion': 'C/ Llacuna, 2', 
-    'codigo_postal': '08011',
-    'localidad': {
-      'nombre': 'Barcelona',
-      'provincia': 'Barcelona'
-    },
-    'telefono': '902111333',
-    "comandas":[
+db.productos.insertMany([
+  {
+    'pizzas': [
       {
-        'id': 1,
-        'idtienda': 1,
-        'fecha_hora': new Date("2021-11-20T12:05:45"),
-        'reparto_recoger': {
-            'tipo': 'Recoger en tienda'
-        },
-        'productos': [
-          {
-            'cantidad_productos': {
-              'pizzas': 2,
-              'hamburguesas': 1,
-              'bebidas': 2
-            },
-            'precio_total': 37.75,
-            'pizzas': [
-              {
-                'nombre': 'Nombre pizza 1',
-                'descripcion': 'Descripcion pizza 1',
-                'imagen': 'Imagen pizza 1',
-                'precio': 10.95,
-                'categoria': 'Vegetarianas'
-              },
-              {
-                'nombre': 'Nombre pizza 2',
-                'descripcion': 'Descripcion pizza 2',
-                'imagen': 'Imagen pizza 2',
-                'precio': 12.95,
-                'categoria': 'Masa fina'
-              },
-          ],
-          'hamburguesas': {
-            'nombre': 'Nombre hamburguesa 1',
-              'descripcion': 'Descripcion hamburguesa 1',
-              'imagen': 'Imagen hamburguesa 1',
-              'precio': 8.95,
-          },
-          'bebidas': [
-            {
-              'nombre': 'Nombre bebida 1',
-              'descripcion': 'Descripcion bebida 1',
-              'imagen': 'Imagen Bebida 1',
-              'precio': 2.95,
-            },
-            {
-              'nombre': 'Nombre bebida 2',
-              'descripcion': 'Descripcion bebida 2',
-              'imagen': 'Imagen Bebida 2',
-              'precio': 1.95,
-            },
-          ]
-        },
-        ] 
+        '_id': 1,
+        'nombre': 'Nombre pizza 1',
+        'descripcion': 'Descripcion pizza 1',
+        'imagen': 'Imagen pizza 1',
+        'precio': 10.95,
+        'categoria': 'Vegetarianas'
       },
       {
-        'id': 2,
-        'idtienda': 2,
-        'fecha_hora': new Date("2022-01-20T12:05:45"),
-        'reparto_recoger': {
-            'tipo': 'Reparto',
-            'idrepartidor': 2,
-            'fecha_hora_entrega': new Date("2022-01-20T13:15:25"),
-        },
-        'productos': [
-          {
-            'cantidad_productos': {
-              'pizzas': 2,
-              'hamburguesas': 2,
-              'bebidas': 1
-            },
-            'precio_total': 43.75,
-            'pizzas': [
-              {
-                'nombre': 'Nombre pizza 2',
-                'descripcion': 'Descripcion pizza 2',
-                'imagen': 'Imagen pizza 2',
-                'precio': 12.95,
-                'categoria': 'Masa fina'
-              },
-              {
-                'nombre': 'Nombre pizza 3',
-                'descripcion': 'Descripcion pizza 3',
-                'imagen': 'Imagen pizza 3',
-                'precio': 9.95,
-                'categoria': 'Sin queso'
-              },
-          ],
-            'hamburguesas': [
-            {
-              'nombre': 'Nombre hamburguesa 2',
-              'descripcion': 'Descripcion hamburguesa 2',
-              'imagen': 'Imagen hamburguesa 2',
-              'precio': 8.95,
-            },
-            {
-              'nombre': 'Nombre hamburguesa 3',
-              'descripcion': 'Descripcion hamburguesa 3',
-              'imagen': 'Imagen hamburguesa 3',
-              'precio': 9.95,
-            },
-          ],
-            'bebidas': {
-              'nombre': 'Nombre bebida 2',
-              'descripcion': 'Descripcion bebida 2',
-              'imagen': 'Imagen Bebida 2',
-              'precio': 1.95,
-            },
-          },
-        ] 
+        '_id': 2,
+        'nombre': 'Nombre pizza 2',
+        'descripcion': 'Descripcion pizza 2',
+        'imagen': 'Imagen pizza 2',
+        'precio': 12.95,
+        'categoria': 'Masa fina'
       },
-    ],
-  },
-  { 
-    '_id': 2, 
-    'nombre': 'Pepe', 
-    'apellido': 'Garcia', 
-    'direccion': 'C/ Calle, 112', 
-    'codigo_postal': '08055',
-      'localidad': {
-      'nombre': 'Begur',
-      'provincia': 'Girona'
+      {
+        '_id': 3,
+        'nombre': 'Nombre pizza 3',
+        'descripcion': 'Descripcion pizza 3',
+        'imagen': 'Imagen pizza 3',
+        'precio': 9.95,
+        'categoria': 'Sin queso'
       },
-    'telefono': '922555666',
-    'comandas':
+  ]},
+  {
+    'hamburguesas': [
+      {
+        '_id': 4,  
+        'nombre': 'Nombre hamburguesa 1',
+        'descripcion': 'Descripcion hamburguesa 1',
+        'imagen': 'Imagen hamburguesa 1',
+        'precio': 8.95,
+      },
+      {
+        '_id': 5, 
+        'nombre': 'Nombre hamburguesa 2',
+        'descripcion': 'Descripcion hamburguesa 2',
+        'imagen': 'Imagen hamburguesa 2',
+        'precio': 8.95,
+      },
+      {
+        '_id': 6, 
+        'nombre': 'Nombre hamburguesa 3',
+        'descripcion': 'Descripcion hamburguesa 3',
+        'imagen': 'Imagen hamburguesa 3',
+        'precio': 9.95,
+      },
+    
+    ]},
     {
-      'id': 3,
-      'idtienda': 3,
-      'fecha_hora': new Date("2022-03-26T20:05:45"),
-      'reparto_recoger': {
-          'tipo': 'Recoger en tienda'
-      },
-      'productos': [
+      'bebidas': [
         {
-          'cantidad_productos': {
-            'pizzas': 1,
-            'hamburguesas': 1,
-            'bebidas': 1
-          },
-          'precio_total': 24.75,
-          'pizzas':
-            {
-              'nombre': 'Nombre pizza 1',
-              'descripcion': 'Descripcion pizza 1',
-              'imagen': 'Imagen pizza 1',
-              'precio': 10.95,
-              'categoria': 'Vegetarianas'
-            },
-          'hamburguesas': {
-            'nombre': 'Nombre hamburguesa 2',
-              'descripcion': 'Descripcion hamburguesa 2',
-              'imagen': 'Imagen hamburguesa 2',
-              'precio': 8.95,
-          },
-          'bebidas': 
-            {
-              'nombre': 'Nombre bebida 1',
-              'descripcion': 'Descripcion bebida 1',
-              'imagen': 'Imagen Bebida 1',
-              'precio': 2.95,
-            },
+          '_id': 7, 
+          'nombre': 'Nombre bebida 1',
+          'descripcion': 'Descripcion bebida 1',
+          'imagen': 'Imagen Bebida 1',
+          'precio': 2.95,
         },
-      ] 
-    },
-  },
-  { 
-    '_id': 3, 
-    'nombre': 'Andrés', 
-    'apellido': 'Santana', 
-    'direccion': 'C/ Sant Adria, 88', 
-    'codigo_postal': '08066' ,
-    'localidad': {
-      'nombre': 'Mataro',
-      'provincia': 'Barcelona'
-    },
-    'telefono': '94777333',
-    'comandas':
-    {
-      'id': 4,
-      'idtienda': 3,
-      'fecha_hora': new Date("2022-05-06T21:05:45"),
-      'reparto_recoger': {
-            'tipo': 'Reparto',
-            'idrepartidor': 7,
-            'fecha_hora_entrega': new Date("2022-05-06T22:15:25"),
-      },
-      'productos': [
         {
-          'cantidad_productos': {
-            'pizzas': 1,
-            'hamburguesas': 1,
-            'bebidas': 1
-          },
-          'precio_total': 44.75,
-          'pizzas':
-            {
-              'nombre': 'Nombre pizza 2',
-              'descripcion': 'Descripcion pizza 2',
-              'imagen': 'Imagen pizza 1',
-              'precio': 11.95,
-              'categoria': 'Vegetarianas'
-            },
-          'hamburguesas': {
-            'nombre': 'Nombre hamburguesa 1',
-              'descripcion': 'Descripcion hamburguesa 1',
-              'imagen': 'Imagen hamburguesa 1',
-              'precio': 9.95,
-          },
-          'bebidas': 
-            {
-              'nombre': 'Nombre bebida 1',
-              'descripcion': 'Descripcion bebida 1',
-              'imagen': 'Imagen Bebida 1',
-              'precio': 2.95,
-            },
+          '_id': 8, 
+          'nombre': 'Nombre bebida 2',
+          'descripcion': 'Descripcion bebida 2',
+          'imagen': 'Imagen Bebida 2',
+          'precio': 1.95,
         },
-      ] 
-    },
-  },
+  ]}
 ]);
 
 db.tiendas.drop();
@@ -268,7 +107,96 @@ db.tiendas.insertMany([
         'puesto': 'repartidora'
       }
     ],
-    
+    'clientes': [
+    { 
+      'nombre': 'Jeremías', 
+      'apellido': 'Huerta', 
+      'direccion': 'C/ Llacuna, 2', 
+      'codigo_postal': '08011',
+      'localidad': {
+        'nombre': 'Barcelona',
+        'provincia': 'Barcelona'
+      },
+      'telefono': '902111333',
+      'comandas': {
+        '_id': 1,
+        'fecha_hora': new Date("2022-05-06T21:05:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 2,
+              'fecha_hora_entrega': new Date("2022-05-06T22:15:25"),
+        },
+        'productos': [1, 2, 2, 8],
+        'precio_total': 30.90,
+      },
+    },
+    { 
+      'nombre': 'Pepe', 
+      'apellido': 'Garcia', 
+      'direccion': 'C/ Calle, 112', 
+      'codigo_postal': '08055',
+        'localidad': {
+        'nombre': 'Begur',
+        'provincia': 'Girona'
+        },
+      'telefono': '922555666',
+        'comandas': [{
+        '_id': 2,
+        'fecha_hora': new Date("2022-05-07T20:09:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 2,
+              'fecha_hora_entrega': new Date("2022-05-07T20:15:25"),
+        },
+        'productos': [3, 4, 7, 8],
+        'precio_total': 35.90,
+        },
+        {
+        '_id': 3,
+        'fecha_hora': new Date("2022-05-08T14:09:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 2,
+              'fecha_hora_entrega': new Date("2022-05-08T14:25:25"),
+        },
+        'productos': [1, 3, 3, 6, 8],
+        'precio_total': 40.90,
+        },
+      ]
+    },
+    { 
+      'nombre': 'Andrés', 
+      'apellido': 'Santana', 
+      'direccion': 'C/ Sant Adria, 88', 
+      'codigo_postal': '08066' ,
+      'localidad': {
+        'nombre': 'Mataro',
+        'provincia': 'Barcelona'
+      },
+      'telefono': '94777333',
+      'comandas': [{
+          '_id': 4,
+          'fecha_hora': new Date("2022-05-20T20:09:45"),
+          'reparto_recoger': {
+                'tipo': 'Reparto',
+                'idrepartidor': 2,
+                'fecha_hora_entrega': new Date("2022-05-20T20:15:25"),
+          },
+          'productos': [3, 4, 7, 8],
+          'precio_total': 35.90,
+        },
+        {
+          '_id': 5,
+          'fecha_hora': new Date("2022-05-21T19:09:45"),
+          'reparto_recoger': {
+                'tipo': 'recoger'
+          },
+          'productos': [1, 2],
+          'precio_total': 22.90,
+        },
+      ]
+    }
+  ],
   },
   { 
     '_id': 2, 
@@ -307,6 +235,28 @@ db.tiendas.insertMany([
         'puesto': 'repartidor'
       },
     ],
+    'clientes': { 
+      'nombre': 'Pedro', 
+      'apellido': 'Lalala', 
+      'direccion': 'C/ Almogavers, 2', 
+      'codigo_postal': '08022',
+      'localidad': {
+        'nombre': 'Barcelona',
+        'provincia': 'Barcelona'
+      },
+      'telefono': '90110022',
+      'comandas': {
+        '_id': 6,
+        'fecha_hora': new Date("2022-05-15T18:05:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 5,
+              'fecha_hora_entrega': new Date("2022-05-15T19:15:25"),
+        },
+        'productos': [3, 4],
+        'precio_total': 10.90,
+      },
+    },
   },
   { 
     '_id': 3, 
@@ -345,5 +295,39 @@ db.tiendas.insertMany([
         'puesto': 'cocinera'
       },
     ],
+    'clientes': { 
+      'nombre': 'Antonia', 
+      'apellido': 'Garcia', 
+      'direccion': 'C/ Stree, 612', 
+      'codigo_postal': '08000',
+        'localidad': {
+        'nombre': 'Badalona',
+        'provincia': 'Barcelona'
+        },
+      'telefono': '625056626',
+        'comandas': [{
+        '_id': 6,
+        'fecha_hora': new Date("2022-05-07T20:09:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 7,
+              'fecha_hora_entrega': new Date("2022-05-07T20:15:25"),
+        },
+        'productos': [2, 7, 8],
+        'precio_total': 25.90,
+        },
+        {
+        '_id': 6,
+        'fecha_hora': new Date("2022-05-08T14:09:45"),
+        'reparto_recoger': {
+              'tipo': 'Reparto',
+              'idrepartidor': 2,
+              'fecha_hora_entrega': new Date("2022-05-08T14:25:25"),
+        },
+        'productos': [2, 2, 6, 6, 8],
+        'precio_total': 50.90
+        },
+      ],
+    },
   },
 ]);
