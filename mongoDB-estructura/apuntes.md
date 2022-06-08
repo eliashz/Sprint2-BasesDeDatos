@@ -2,6 +2,8 @@
 Comandos para ejecutar MondoDB desde la consola: ``mongo localhost:27017/basededades script.js``  
 [Extensión VSC](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)  
 
+[Mongo DB Docs](https://www.mongodb.com/docs/manual/tutorial/)  
+
 [MongoDB VS Code](https://www.youtube.com/watch?v=fZgJHJO81dw)  
 https://www.youtube.com/watch?v=lWMemPN9t6Q  
 https://www.youtube.com/watch?v=DPdAfgmkNuE   
